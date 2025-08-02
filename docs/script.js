@@ -1,5 +1,5 @@
 // Configuration
-const API_BASE_URL = 'http://58.186.129.201:5000/api';
+const API_BASE_URL = 'https://43132cc82716.ngrok-free.app/api';
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 let selectedFile = null;
 let isProcessing = false;
