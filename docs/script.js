@@ -1,5 +1,5 @@
 // Configuration
-const API_BASE_URL = window.location.origin + '/api';
+const API_BASE_URL = 'http://127.0.0.1:5000/api';
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 let selectedFile = null;
 let isProcessing = false;
