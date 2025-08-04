@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 AI Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 AI Image Generator</h1>
+            <p>Chuyển đổi ảnh với AI sử dụng Stable Diffusion</p>
+        </div>
+        
+        <div class="content">
+            <div id="serverStatus" class="server-status checking">
+                🔍 Đang kiểm tra kết nối server...
+            </div>
+            
+            <form id="imageForm">
+                <div class="form-group">
+                    <label for="userRequest">Mô tả yêu cầu của bạn:</label>
+                    <textarea 
+                        id="userRequest" 
+                        name="userRequest" 
+                        placeholder="Ví dụ: Chuyển ảnh này thành phong cách anime, thêm hiệu ứng ánh sáng đẹp mắt, tạo bầu không khí ma thuật..."
+                        required
+                    ></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="imageFile">Chọn ảnh đầu vào:</label>
+                    <div class="file-upload">
+                        <input type="file" id="imageFile" name="imageFile" accept="image/*" required>
+                        <div class="upload-area" id="uploadArea">
+                            <div style="font-size: 3rem; color: #667eea; margin-bottom: 15px;">📁</div>
+                            <p>Click để chọn ảnh hoặc kéo thả vào đây</p>
+                            <span class="file-info">Hỗ trợ: JPG, PNG, GIF (Tối đa 10MB)</span>
+                        </div>
+                    </div>
+                    <div class="preview-container" id="previewContainer" style="display: none;">
+                        <img id="imagePreview" alt="Preview">
+                        <button type="button" class="remove-image" id="removeImage">✕</button>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="generateBtn">
+                    🚀 Tạo Ảnh
+                </button>
+            </form>
+            
+            <div id="result" class="result" style="display: none;">
+                <h3>Kết quả:</h3>
+                <div id="resultContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
